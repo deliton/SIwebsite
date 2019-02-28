@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'SpaceFF';
+    src: url('../font/space\ age.ttf'); /* IE9 Compat Modes */
+}
+
+body {
+    margin: 0;
+}
+
+.header{
+    width: 100%;
+    height: 30px;
+    background-color: #1d2123;
+    
+}
+
+.menu-content{
+    width: 100%;
+    height: 50px;
+    display: block;
+    text-align: center;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px; 
+    background-color: #121415;
+}
+  
+.pequeno-header {
+    background-color: #1d2123;
+    margin: 0px;
+    height: 25px;
+}
+
+.main-header {
+    background-color: #151819;
+    padding: 10px;
+    margin: 0px;
+    height: 50px;
+}
+
+.menu-componentes a {
+    float: left;
+    font-family: 'Bahnschrift', Arial, Helvetica, sans-serif;
+    color: #647070;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 4%;
+     
+}
+
+.menu-componentes a:hover {
+    color: #20a83e;
+}
+
+.menu-componentes-ladodireito {
+    float: right;
+}
+
+.header-inferior {
+    background-color: #1d2123;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.gradezinha{
+    color: #647070;
+    margin-left: 2%;
+}
+
+.header-inferior a {
+    font-family: 'Bahnschrift';
+}
+
+.inferior-titulo {
+    color: #20a83e;
+    margin-right: 2%;
+    font-size: 18px;
+}
+
+.inferior-texto {
+    color: #647070;
+    margin-right: 2%;
+    font-size: 14px;
+}
+
+.inferior-link {
+    border-radius: 4px;
+    border: 1px solid #20a83e;
+    color: #20a83e;
+    font-size: 14px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.inferior-link:hover{
+    color:#151819;
+    border: transparent;
+    background-color: #20a83e;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+a#Homepage {
+    font-size: 40px;
+    font-family: 'SpaceFF';
+    color: #20a83e;
+    text-decoration: none;
+    text-align: start;
+    vertical-align: middle;
+    line-height: 45px; 
+    float: left;
+    margin-left: 0.5%;
+    width: 22%;
+}
+
+.gradient-body {
+    background: #121415;
+    background: -moz-linear-gradient(left, #121415 0%, #282C2F 100%);
+    background: -webkit-linear-gradient(left, #121415 0%, #282C2F 100%);
+    background: linear-gradient(to right, #121415 0%, #282C2F 100%);
+    height: 1020px;
+}
+
+
