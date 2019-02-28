@@ -5,6 +5,26 @@
 
 body {
     margin: 0;
+    font-family: 'Bahnschrift';
+}
+
+.bg{
+    background-image:url('../img/arte.png'); 
+    background-size: cover;
+    height: 660px;
+    width: 100%;
+    position: relative;
+}
+
+
+.bgtexto{
+    color: #d3d3d3;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
 }
 
 .header{
@@ -117,12 +137,15 @@ a#Homepage {
     width: 22%;
 }
 
-.gradient-body {
-    background: #121415;
-    background: -moz-linear-gradient(left, #121415 0%, #282C2F 100%);
-    background: -webkit-linear-gradient(left, #121415 0%, #282C2F 100%);
-    background: linear-gradient(to right, #121415 0%, #282C2F 100%);
-    height: 1020px;
+
+.content{
+    background-color: red;
+    width: 100%;
+    height: 500px;
+    padding: 0 auto;
 }
 
-
+footer{
+    background-color: #1d2123;
+    height: 250px;
+}
