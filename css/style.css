@@ -1,6 +1,11 @@
+/* Estilo do corpo, em grande parte toda a estrutura principal */
+/* ======================================================================================
+====================================================================================== */
+
+
 @font-face {
     font-family: 'SpaceFF';
-    src: url('../font/space\ age.ttf'); /* IE9 Compat Modes */
+    src: url('../font/space\ age.ttf');
 }
 
 body {
@@ -18,6 +23,7 @@ body {
 
 
 .bgtexto{
+    width: 100%;
     color: #d3d3d3;
     text-align: center;
     position: absolute;
@@ -27,11 +33,35 @@ body {
     font-size: 30px;
 }
 
+
+
+ul {
+    font-size: 18px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+  li {
+    justify-content: end;
+    margin: 0px 20px 0px 20px ;
+    float: left;
+    word-wrap: none;
+    white-space: unset;
+  }
+  
+
+/* Parte do menu */
+/* ======================================================================================
+====================================================================================== */
+
 .header{
     width: 100%;
     height: 30px;
-    background-color: #1d2123;
-    
+    background-color: #1d2123;  
 }
 
 .menu-content{
@@ -45,19 +75,6 @@ body {
     line-height: 50px; 
     background-color: #121415;
 }
-  
-.pequeno-header {
-    background-color: #1d2123;
-    margin: 0px;
-    height: 25px;
-}
-
-.main-header {
-    background-color: #151819;
-    padding: 10px;
-    margin: 0px;
-    height: 50px;
-}
 
 .menu-componentes a {
     float: left;
@@ -66,7 +83,6 @@ body {
     text-align: center;
     text-decoration: none;
     margin-left: 4%;
-     
 }
 
 .menu-componentes a:hover {
@@ -84,8 +100,15 @@ body {
     text-align: center;
     vertical-align: middle;
     line-height: 40px;
+    position: relative;
 }
 
+.botaoLink{
+    position:absolute;
+    float: left;
+    display: inline;
+    margin-top: -2px; 
+}
 .gradezinha{
     color: #647070;
     margin-left: 2%;
@@ -103,8 +126,11 @@ body {
 
 .inferior-texto {
     color: #647070;
-    margin-right: 2%;
     font-size: 14px;
+    position: static;
+    white-space: nowrap;
+    text-decoration:none;
+    padding-right: 20px;
 }
 
 .inferior-link {
@@ -113,7 +139,8 @@ body {
     color: #20a83e;
     font-size: 14px;
     padding: 5px;
-    text-decoration: none;
+    text-decoration:none;
+
 }
 
 .inferior-link:hover{
@@ -138,14 +165,192 @@ a#Homepage {
 }
 
 
-.content{
-    background-color: red;
+
+/* 
+estilização dos conteudos do site */
+/* ======================================================================================
+====================================================================================== */
+
+.conteudo{
+    overflow: hidden;
     width: 100%;
-    height: 500px;
-    padding: 0 auto;
+    height:85%;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
 }
+
+.conteudo div {
+    min-height: 200px;
+    padding: 10px;
+}
+
+.content{
+    overflow:hidden; 
+}
+
+.content div {
+    min-height: 200px;
+    padding: 10px;
+}
+
+img.centro{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: block;
+    max-width: 700px;
+    width:100%;
+    object-fit: cover;
+    left: 5px;
+    right: 5px;
+    top:auto;
+
+}
+
+.ladoesquerdo{
+    width: 50%;
+    height: 100%;
+    float:left; 
+    margin-right:20px;
+}
+
+.colunameia{
+    width: auto;
+    height: 100%;
+    float:left; 
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+
+.ladoesquerdo2{
+    background-position: center;
+    width: 30%;
+    height: 100%;
+    float:left; 
+    margin-right:20px;
+}
+
+.ladodireito{
+    background-color: white;
+    overflow:hidden;
+    margin:10px;
+}
+
+@media screen and (max-width: 900px) and (min-width: 100px) {
+   .ladoesquerdo { 
+    float: none;
+    margin-right:0;
+    width:auto;
+    border:0;  
+    top: 0px;
+    height: auto;
+  }
+
+}
+
+.bgcontainer{
+    width:100%;
+    min-height: 500px;
+    max-height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    object-fit: cover;
+}
+
+
+.noticia2 {
+    margin:20px;
+    width:250px;
+    height:160px;
+    background-image: url(../img/noticia2.jpg); 
+    background-repeat: no-repeat; 
+    background-size:cover;
+    float:left; 
+    margin-right:20px;
+    position: relative;
+}
+
+.noticia2 {
+    position: relative;
+    margin:20px;
+    width:250px;
+    height:160px;
+    background-image: url(../img/noticia3.jpg); 
+    background-repeat: no-repeat; 
+    background-size:cover;
+    float:left; 
+    margin-right:20px;
+}
+
+noticiatexto {
+    width: 50%;
+    height: 100%;
+    float:left; 
+    margin-right:20px;
+    position: absolute;
+}
+
+.texto{
+    width: 50%;
+    height: 100%;
+    float:left; 
+    margin-right:20px;
+    position: absolute;
+}
+
+.parallax {
+    height: 600px;
+    background-image: url(../img/the-coder.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.1;
+}
+
+.imagemnoticia{
+    border-radius: 10px; 
+}
+  
+/* 
+o footer principal e provavelmente estará em todas as outras páginas */
+/* ======================================================================================
+====================================================================================== */
 
 footer{
     background-color: #1d2123;
     height: 250px;
 }
+/* 
+slider para os logos */
+/* ======================================================================================
+====================================================================================== */
+
+
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+    
+    div#slider { overflow: hidden; }
+    div#slider figure img { width: 20%; float: left; }
+    div#slider figure { 
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      text-align: left;
+      font-size: 0;
+      animation: 30s slidy infinite; 
+    }
