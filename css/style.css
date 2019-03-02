@@ -40,7 +40,7 @@ h2{
 
 
 
-ul {
+.bgtexto ul {
     font-size: 18px;
     overflow: hidden;
     position: relative;
@@ -50,7 +50,7 @@ ul {
     transform: translate(-50%, -50%);
 }
   
-  li {
+.bgtexto li {
     justify-content: end;
     margin: 0px 20px 0px 20px ;
     float: left;
@@ -170,7 +170,25 @@ a#Homepage {
     width: 22%;
 }
 
+.socialmedia{
+    position: relative;
+    float: right;
+    display: inline;
+    text-align: end;
+    color:#20a83e;
+    font-size: 30px;
+    margin-top: 2px;
+    margin-right: 20px;
+}
 
+.socialmedia a {
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.socialmedia a i {
+    color:#20a83e;
+}
 
 /* 
 estilização dos conteudos do site */
@@ -190,6 +208,7 @@ estilização dos conteudos do site */
     min-height: 200px;
     padding: 10px;
 }
+
 
 .content{
     overflow:hidden; 
@@ -223,7 +242,7 @@ img.centro{
 
 .ladodireito{
     overflow:hidden;
-    margin-right:20px;
+    margin-right:0 auto;
 }
 
 .colunameia{
@@ -234,6 +253,22 @@ img.centro{
     justify-content: center;
 }
 
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+} 
+.embed-container iframe, 
+.embed-container object, 
+.embed-container embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
 
 
 
@@ -307,20 +342,9 @@ noticiatexto {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    opacity: 0.1;
+    opacity: 0.3;
     transform: translateZ(-1px) scale(1.2);
 }
-
-.parallax2 {
-    height: 600px;
-    background-image: url(../img/programm.jpg);
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    
-}
-
 
 .imagemnoticia{
     border-radius: 10px; 
@@ -343,6 +367,7 @@ noticiatexto {
 }
 
 .card{
+    background-color: white;
     border-radius: 10px;
     height: 20%;
     margin-bottom: 10px;
@@ -367,7 +392,6 @@ noticiatexto {
 
 .grade div {
     width: 500px;
-    margin: 20px;
     text-align: center;
     font-size: 13px;
     align-self: center;
@@ -386,14 +410,19 @@ noticiatexto {
 }
 
 .grade div > p {
-   float:left;
-   display:flex;
-   margin-left:45%;
-   margin-top:-190px; 
-   width: 50%;
-   height: 100%;
-   font-size: 13px;
+    float:left;
+    display:flex;
+    margin-left:45%;
+    margin-top:-210px; 
+    width: 50%;
+    height: 100%;
+    font-size: 13px;
+    display: flex; 
+    text-align: initial;
 }
+
+
+
 /* 
 o footer principal e provavelmente estará em todas as outras páginas */
 /* ======================================================================================
@@ -404,31 +433,134 @@ footer{
     height: 250px;
 }
 /* 
-slider para os logos */
+slider para o menu principal */
 /* ======================================================================================
 ====================================================================================== */
 
+.slideshow {
+  width: 625px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: solid 1px white;
+}
 
-@keyframes slidy {
-    0% { left: 0%; }
-    20% { left: 0%; }
-    25% { left: -100%; }
-    45% { left: -100%; }
-    50% { left: -200%; }
-    70% { left: -200%; }
-    75% { left: -300%; }
-    95% { left: -300%; }
-    100% { left: -400%; }
-    }
-    
-    div#slider { overflow: hidden; }
-    div#slider figure img { width: 20%; float: left; }
-    div#slider figure { 
-      position: relative;
-      width: 500%;
-      margin: 0;
-      left: 0;
-      text-align: left;
-      font-size: 0;
-      animation: 30s slidy infinite; 
-    }
+.slideshow-container {
+  width: 2500px;
+  font-size: 0;
+  transition: 1s ease;
+  height: 225px;
+}
+
+.slideshow-container:hover {
+  animation-play-state: paused;
+}
+
+img, .text-container {
+  width: 625px;
+  height: auto;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.text-container {
+  height: 225px;
+  position: relative;
+}
+
+
+p {
+  position: relative;
+  top: -45%;
+  padding: 5px;
+}
+
+.slide {
+  animation: slide 24s ease infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  
+  12.5% {
+    transform: translateX(0%);
+  }
+  
+  25% {
+    transform: translateX(-25%);
+  }
+  
+  37.5% {
+    transform: translateX(-25%);
+  }
+  
+  50% {
+    transform: translateX(-50%);
+  }
+  
+  62.5% {
+    transform: translateX(-50%);
+  }
+  
+  75% {
+    transform: translateX(-75%);
+  }
+  
+  87.5% {
+    transform: translateX(-75%);
+  }
+  
+  99% {
+    transform: translateX(-75%);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.p {
+  margin-top: 140px;
+  text-align: center;
+}
+
+
+/* 
+formulario para contatos */
+/* ======================================================================================
+====================================================================================== */
+
+.formulario{
+    width: 80%;
+    height: 620px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: -5px 5px #647070;
+    border:2px solid #647070;
+}
+
+input[type=text], select, textarea{
+    width: 100%;
+    border-radius: 3px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top:6px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    top:50%;
+    resize: vertical
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
