@@ -1,12 +1,10 @@
-/* Estilo do corpo, em grande parte toda a estrutura principal */
-
-
 /* ======================================================================================
+CORPO DO SITE (NAV)
 ====================================================================================== */
 
 @font-face {
     font-family: 'SpaceFF';
-    src: url('../font/space\ age.ttf');
+    src: url('../font/space/age.ttf');
 }
 
 @font-face {
@@ -14,33 +12,33 @@
     src: url('../font/bahnschrift._semibold.ttf')
 }
 
+
 body {
     margin: 0;
     border: 0;
     font-family: 'Bahnschrift';
 }
 
+.font-noticia{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.verdeclaro {
+    color: #20a83e;
+}
+
+.cinzaclaro {
+    color: #1d2123;
+}
+
+.cinzaescuro {
+    color: #121415;
+}
+
 
 /* ======================================================================================
+MENU SUPERIOR ESTILO (NAV)
 ====================================================================================== */
-
-.header {
-    width: 100%;
-    height: 30px;
-    background-color: #1d2123;
-}
-
-.menu-content {
-    width: 100%;
-    height: 50px;
-    display: block;
-    text-align: center;
-    position: relative;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 50px;
-    background-color: #121415;
-}
 
 .menu-componentes {
     width: 100%;
@@ -61,35 +59,9 @@ body {
     color: #20a83e;
 }
 
-.menu-componentes-ladodireito {
-    float: right;
-}
-
-.menu-opcoes {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.header-inferior {
-    background-color: #1d2123;
-    width: 100%;
-    text-align: center;
-    position: relative;
-}
-
-.botaoLink {
-    position: absolute;
-    float: left;
-    padding: 2px;
-}
-
 .gradezinha {
     color: #647070;
     margin-left: 2%;
-}
-
-.header-inferior a {
-    font-family: 'Bahnschrift';
 }
 
 .inferior-titulo {
@@ -123,40 +95,177 @@ body {
     transition-duration: 0.4s;
 }
 
-.Homepage {
-    font-size: 40px;
-    font-family: 'SpaceFF';
-    color: #20a83e;
-    text-decoration: none;
-    text-align: start;
-    vertical-align: middle;
-    line-height: 45px;
-    float: left;
-    margin-left: 0.5%;
-    width: 22%;
+
+/* ======================================================================================
+CONTEUDO DA PÁGINA ESTILOS
+====================================================================================== */
+
+.bordas {
+    width: 130px;
+    height: 130px;
+    transform: rotate(45deg);
 }
 
-.socialmedia {
+.icones {
+    margin: 20px 50px 60px 30px;
+    transform: rotate(-45deg);
+    width: 65px;
+}
+
+.sombra {
+    box-shadow: 5px 5px 12px rgba(19, 19, 19, 0.582);
+}
+
+
+/* ======================================================================================
+TAB DO CONTEUDO
+====================================================================================== */
+
+.item {
+    width: 100px;
+    height: 100px;
+}
+
+.item:hover {
+    transition: none !important;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #f8f9fa !important;
+}
+
+.link.active {
+    border-color: green green #f8f9fa !important;
+    transition: none !important;
+}
+
+.icone1 {
+    background-image: url(../img/chip.png);
+    background-position: center;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.icone2 {
+    background-image: url(../img/employee.png);
+    background-position: center;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.icone3 {
+    background-image: url(../img/programmer.png);
+    background-position: center;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.seta {
+    width: 10px;
+    content: "";
     position: relative;
-    text-align: end;
-    color: #20a83e;
+    bottom: 0px;
+    left: 38.2%;
+    border: 15px solid transparent;
+    border-top-color: green;
+    margin-top: -40px;
+    transform: none;
 }
 
-.socialmedia a {
-    margin-right: 5px;
-    text-decoration: none;
+.parallax{
+    background-image: url(../img/programm.jpg);
+    background-size: cover;
+    width:100%;
+    height:520px;
+    padding: 0;
+    margin: 0;
+    background-attachment: fixed;
+    opacity: 0.2;
+
 }
 
-.socialmedia a i {
-    color: #20a83e;
+
+.full{
+    width: 100px;
+    height: 100px;
+    transition: 0.1s;
+}
+
+.full:hover{
+    transform: scale(1.2);
+    transition: 0.1s;
+}
+
+.titulo-noticia{
+    background: #20a83e;
+    transform: skew(-12deg);
+    width: 200px;
+}
+
+.noticia-principal{
+    top: 60%;
+}
+
+.info{
+    visibility: visible;
+}
+
+.sub a{
+    font-size:30px;
+    text-decoration:none;
+    color: white;
+}
+
+.sub a:hover{
+    text-decoration:none;
+}
+
+.side-news{
+    top: 20%;
+}
+
+.side-news a {
+    font-size: 20px;
+}
+
+.img-principal{
+   width:100%;
+   height:104%;
+   overflow: hidden;
+    position: relative;
+}
+
+.foot-news{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.foot-news img {
+    max-width: 100%;
+    transition: all 0.3s;
+}
+
+.foot-news:hover img {
+    transform: scale(1.2);
+  }
+
+.foot-img{
+    object-fit: cover;
+    height: 100%;
+    width:100%;
+    background-size: cover;
 }
 
 
-/* 
-estilização dos conteudos do site */
 
 
-/* Make the image fully responsive */
+/* ======================================================================================
+SESSÃO DE RESPONSIVIDADE
+====================================================================================== */
 
 @media (max-width: 600px) {
     .inferior-texto {
@@ -170,24 +279,77 @@ estilização dos conteudos do site */
     }
 }
 
+/* Menor resolução  */
 
-/* @media (max-width: 1000px) {
-    .navbar-toggler {
-        position: absolute;
+@media (max-width: 575.98px) {
+    .nav-item {
+        width: 70px;
+        height: 70px;
+        transition: 0.6s;
     }
-} */
+    .info{
+        visibility: hidden;
+    }
+
+    .sub a{
+        font-size:20px;
+    }
+
+    .noticia-principal{
+        top: 20%;
+    }
+}
 
 
-/* algumas responsividades */
+/* Resolução de celular */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .nav-item {
+        width: 70px;
+        height: 70px;
+        transition: 0.6s;
+    }
+
+    .info{
+        visibility: hidden;
+    }
+
+    .sub a{
+        font-size:20px;
+    }
+}
 
 
-/* ======================================================================================
-====================================================================================== */
+/* Resolução de tablets */
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .bordas {
+        width: 90px;
+        height: 90px;
+    }
+    .icones {
+        margin: 10px 50px 60px 20px;
+        width: 45px;
+    }
 
-/* ======================================================================================
-====================================================================================== */
+    .info{
+        visibility: hidden;
+    }
 
+    .sub a{
+        font-size:20px;
+    }
+}
 
-/* ======================================================================================
-====================================================================================== */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .bordas {
+        width: 100px;
+        height: 100px;
+    }
+    .icones {
+        margin: 10px 50px 60px 20px;
+        width: 55px;
+    }
+}
+
+@media (min-width: 1200px) {}

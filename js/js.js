@@ -1,17 +1,27 @@
-var slideIndex = 1;
-showDivs(slideIndex);
+(function() {
+    // setup your carousels as you normally would using JS
+    // or via data attributes according to the documentation
+    // https://getbootstrap.com/javascript/#carousel
+    $('#carousel123').carousel({ interval: 2000 });
+    $('#carouselABC').carousel({ interval: 3600 });
+}());
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+(function() {
+    $('.carousel-showmanymoveone .item').each(function() {
+        var itemToClone = $(this);
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
+        for (var i = 1; i < 4; i++) {
+            itemToClone = itemToClone.next();
+
+            // wrap around if at end of item collection
+            if (!itemToClone.length) {
+                itemToClone = $(this).siblings(':first');
+            }
+
+            // grab item, clone, add marker class, add to collection
+            itemToClone.children(':first-child').clone()
+                .addClass("cloneditem-" + (i))
+                .appendTo($(this));
+        }
+    });
+}());
