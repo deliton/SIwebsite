@@ -12,14 +12,18 @@ CORPO DO SITE (NAV)
     src: url('../font/bahnschrift._semibold.ttf')
 }
 
-
 body {
     margin: 0;
     border: 0;
     font-family: 'Bahnschrift';
+    transition: 1.0s;
 }
 
-.font-noticia{
+html {
+    scroll-behavior: smooth;
+}
+
+.font-noticia {
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -31,10 +35,68 @@ body {
     color: #1d2123;
 }
 
+.cinzalight {
+    color: #647070;
+}
+
 .cinzaescuro {
     color: #121415;
 }
 
+#section {
+    transition: 2s;
+}
+
+.texto-front {
+    margin-top: 150px;
+}
+
+.texto-central {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#intro {
+    margin-top: -80px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-blend-mode: screen;
+    background: url("../img/coding-on-laptop.jpg") center no-repeat;
+    background-size: cover;
+}
+
+#intro .intro-info h2 {
+    color: #1d2123;
+    margin-bottom: 0;
+    margin-top: 80px;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+#intro .intro-info h2 span {
+    color: #101e70;
+}
+
+#intro .intro-info .btn-get-started, #intro .intro-info .btn-services {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1bb1dc;
+    color: #fff;
+}
+
+#intro .intro-info .btn-get-started:hover, #intro .intro-info .btn-services:hover {
+    background: #0a98c0;
+}
 
 /* ======================================================================================
 MENU SUPERIOR ESTILO (NAV)
@@ -44,6 +106,7 @@ MENU SUPERIOR ESTILO (NAV)
     width: 100%;
     position: relative;
     text-align: center;
+    z-index: 999;
 }
 
 .menu-componentes a {
@@ -53,21 +116,26 @@ MENU SUPERIOR ESTILO (NAV)
     text-align: center;
     text-decoration: none;
     margin-left: 4%;
+    z-index: 999;
 }
 
 .menu-componentes a:hover {
     color: #20a83e;
+    transition-duration: 0.4s;
+    z-index: 999;
 }
 
 .gradezinha {
     color: #647070;
     margin-left: 2%;
+    z-index: 999;
 }
 
 .inferior-titulo {
     color: #20a83e;
     font-size: 18px;
     font-family: 'Bahnschrift';
+    z-index: 999;
 }
 
 .inferior-texto {
@@ -77,6 +145,7 @@ MENU SUPERIOR ESTILO (NAV)
     white-space: nowrap;
     text-decoration: none;
     padding-right: 20px;
+    z-index: 999;
 }
 
 .inferior-link {
@@ -86,15 +155,30 @@ MENU SUPERIOR ESTILO (NAV)
     font-size: 12px;
     padding: 3px;
     text-decoration: none;
+    z-index: 9999;
 }
 
 .inferior-link:hover {
     color: #151819;
     background-color: #20a83e;
     text-decoration: none;
-    transition-duration: 0.4s;
+    transition-duration: 0.5s;
+    z-index: 999;
 }
 
+.carousel-container {
+    width: 70%;
+}
+
+/* ======================================================================================
+TESTE
+====================================================================================== */
+
+.container {
+    background-image: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 
 /* ======================================================================================
 CONTEUDO DA PÁGINA ESTILOS
@@ -116,7 +200,6 @@ CONTEUDO DA PÁGINA ESTILOS
     box-shadow: 5px 5px 12px rgba(19, 19, 19, 0.582);
 }
 
-
 /* ======================================================================================
 TAB DO CONTEUDO
 ====================================================================================== */
@@ -130,10 +213,10 @@ TAB DO CONTEUDO
     transition: none !important;
 }
 
-.nav-tabs .nav-item.show .nav-link,
-.nav-tabs .nav-link.active {
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: #495057;
     background-color: #f8f9fa !important;
+    z-index: 999;
 }
 
 .link.active {
@@ -174,55 +257,53 @@ TAB DO CONTEUDO
     transform: none;
 }
 
-.parallax{
+.parallax {
     background-image: url(../img/programm.jpg);
     background-size: cover;
-    width:100%;
-    height:520px;
+    width: 100%;
+    height: 520px;
     padding: 0;
     margin: 0;
     background-attachment: fixed;
     opacity: 0.2;
-
 }
 
-
-.full{
+.full {
     width: 100px;
     height: 100px;
     transition: 0.1s;
 }
 
-.full:hover{
+.full:hover {
     transform: scale(1.2);
     transition: 0.1s;
 }
 
-.titulo-noticia{
+.titulo-noticia {
     background: #20a83e;
     transform: skew(-12deg);
     width: 200px;
 }
 
-.noticia-principal{
+.noticia-principal {
     top: 60%;
 }
 
-.info{
+.info {
     visibility: visible;
 }
 
-.sub a{
-    font-size:30px;
-    text-decoration:none;
+.sub a {
+    font-size: 30px;
+    text-decoration: none;
     color: white;
 }
 
-.sub a:hover{
-    text-decoration:none;
+.sub a:hover {
+    text-decoration: none;
 }
 
-.side-news{
+.side-news {
     top: 20%;
 }
 
@@ -230,16 +311,16 @@ TAB DO CONTEUDO
     font-size: 20px;
 }
 
-.img-principal{
-   width:100%;
-   height:104%;
-   overflow: hidden;
+.img-principal {
+    width: 100%;
+    height: 104%;
+    overflow: hidden;
     position: relative;
 }
 
-.foot-news{
-    width:100%;
-    height:100%;
+.foot-news {
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -251,17 +332,24 @@ TAB DO CONTEUDO
 
 .foot-news:hover img {
     transform: scale(1.2);
-  }
+}
 
-.foot-img{
+.foot-img {
     object-fit: cover;
     height: 100%;
-    width:100%;
+    width: 100%;
     background-size: cover;
 }
 
+/* ======================================================================================
+Footer
+====================================================================================== */
 
-
+.footer {
+    width: 100%;
+    background-color: #151819;
+    min-height: 250px;
+}
 
 /* ======================================================================================
 SESSÃO DE RESPONSIVIDADE
@@ -282,24 +370,46 @@ SESSÃO DE RESPONSIVIDADE
 /* Menor resolução  */
 
 @media (max-width: 575.98px) {
+    .setas {
+        position: absolute;
+        top: 20%;
+    }
+    .texto-front {
+        margin-top: 100px;
+    }
+    .carousel-container {
+        width: 90%;
+    }
+    .carousel-indicators {
+        height: 20px;
+    }
+    .carousel-indicators {
+        top: 50%;
+    }
+    .carousel-item {
+        height: 400px !important;
+    }
+    .carousel-control-next {
+        right: 0px !important;
+    }
+    .carousel-control-prev {
+        left: 0px !important;
+    }
     .nav-item {
         width: 70px;
         height: 70px;
         transition: 0.6s;
     }
-    .info{
+    .info {
         visibility: hidden;
     }
-
-    .sub a{
-        font-size:20px;
+    .sub a {
+        font-size: 20px;
     }
-
-    .noticia-principal{
+    .noticia-principal {
         top: 20%;
     }
 }
-
 
 /* Resolução de celular */
 
@@ -309,16 +419,13 @@ SESSÃO DE RESPONSIVIDADE
         height: 70px;
         transition: 0.6s;
     }
-
-    .info{
+    .info {
         visibility: hidden;
     }
-
-    .sub a{
-        font-size:20px;
+    .sub a {
+        font-size: 20px;
     }
 }
-
 
 /* Resolução de tablets */
 
@@ -331,13 +438,11 @@ SESSÃO DE RESPONSIVIDADE
         margin: 10px 50px 60px 20px;
         width: 45px;
     }
-
-    .info{
+    .info {
         visibility: hidden;
     }
-
-    .sub a{
-        font-size:20px;
+    .sub a {
+        font-size: 20px;
     }
 }
 
@@ -353,3 +458,105 @@ SESSÃO DE RESPONSIVIDADE
 }
 
 @media (min-width: 1200px) {}
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+}
+
+/* Control buttons  */
+
+#quote-carousel .carousel-control {
+    background: none;
+    color: #222;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+
+/* Previous button  */
+
+#quote-carousel .carousel-control.left {
+    left: -12px;
+}
+
+/* Next button  */
+
+#quote-carousel .carousel-control.right {
+    right: -12px !important;
+}
+
+/* Changes the position of the indicators */
+
+#quote-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+
+/* Changes the color of the indicators */
+
+#quote-carousel .carousel-indicators li {
+    background: #c0c0c0;
+}
+
+#quote-carousel .carousel-indicators .active {
+    background: #333333;
+}
+
+#quote-carousel img {
+    width: 250px;
+    height: 100px
+}
+
+/* End carousel */
+
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    #quote-carousel {
+        margin-bottom: 0;
+        padding: 0 40px 30px 40px;
+    }
+}
+
+/* Small devices (tablets, up to 768px) */
+
+@media (max-width: 768px) {
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+    #quote-carousel .carousel-indicators {
+        bottom: -20px !important;
+    }
+    #quote-carousel .carousel-indicators li {
+        display: inline-block;
+        margin: 0px 5px;
+        width: 15px;
+        height: 15px;
+    }
+    #quote-carousel .carousel-indicators li.active {
+        margin: 0px 5px;
+        width: 20px;
+        height: 20px;
+    }
+}
