@@ -594,3 +594,10 @@ table tbody td{
     background-color: transparent;
 
   }
+
+
+
+.transparente{
+    background-color: transparent;
+    border: none;
+}
