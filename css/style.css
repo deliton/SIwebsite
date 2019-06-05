@@ -99,7 +99,7 @@ html {
 }
 
 .intro h2{
-    text-shadow: 0px 3px 5px black;
+    text-shadow: 0px 3px 5px green;
 }
 
 /* ======================================================================================
@@ -607,6 +607,8 @@ table tbody td{
     position: absolute !important;
     top: 0 !important;
     z-index: -9999;
+    color: #1d2123;
+    background-color: #121415
 }
 
 
