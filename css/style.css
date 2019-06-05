@@ -629,22 +629,10 @@ table tbody td{
 	width: 40%;
 }
 
-/* Logo */
-
-.footer-distributed h3{
-	color:  #ffffff;
-	font: normal 36px 'Cookie', cursive;
-	margin: 0;
-}
-
-.footer-distributed h3 span{
-	color:  #5383d3;
-}
-
 /* Footer links */
 
 .footer-distributed .footer-links{
-	color:  #ffffff;
+	color:  #20a83e;
 	margin: 20px 0 12px;
 	padding: 0;
 }
@@ -702,7 +690,7 @@ table tbody td{
 }
 
 .footer-distributed .footer-center p a{
-	color:  #5383d3;
+	color:  #20a83e;
 	text-decoration: none;;
 }
 
@@ -738,11 +726,11 @@ table tbody td{
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  #33383b;
+	background-color:  #20a83e;
 	border-radius: 2px;
 
 	font-size: 20px;
-	color: #ffffff;
+	color: #ffff;
 	text-align: center;
 	line-height: 35px;
 
